@@ -12,8 +12,8 @@ from telegram.ext import (
 )
 
 # ===== НАСТРОЙКИ =====
-TOKEN = '8044001458:AAFSGzJlKIMWsG8dNEc82OOJXjXLRqCFZag'  # замените на токен вашего бота
-ADMIN_USERNAME = 'bruh12341'  # username администратора (без @)
+TOKEN = os.environ.get('TOKEN')
+ADMIN_USERNAME = os.environ.get('ADMIN_USERNAME', 'bruh12341')  # username администратора (без @)
 # Если известен числовой ID администратора, лучше использовать его:
 # ADMIN_ID = 123456789
 # =====================
@@ -512,4 +512,5 @@ def main():
 
 
 if __name__ == '__main__':
+
     main()
